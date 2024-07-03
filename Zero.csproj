@@ -1,0 +1,37 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <PublishAot>true</PublishAot>
+    <InvariantGlobalization>true</InvariantGlobalization>
+    <PlatformTarget>x64</PlatformTarget>
+    <ApplicationIcon>assets\zeroicon.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="7za.exe" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="assets\zeroicon.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="7-Zip.CommandLine" Version="18.1.0" />
+    <PackageReference Include="ini-parser" Version="2.5.2" />
+    <PackageReference Include="Makaretu.Dns.Multicast.New" Version="0.31.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="add right-click menu.bat">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="delete right-click menu.bat">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
