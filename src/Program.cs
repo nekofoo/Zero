@@ -11,6 +11,10 @@ namespace Zero
 		static void Main(string[] args)
 		{			
 			Loadsettings();
+			for (int i = 0; i < args.Length; i++)
+			{
+				args[i] = args[i].Replace(" ", "?zs?");
+			}
 			Console.WriteLine($"* Your ID is \"{Dns.GetHostName()}\"");
 			if (args.Length == 0)
 			{

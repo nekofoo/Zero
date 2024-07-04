@@ -245,6 +245,11 @@ namespace Zero
                 p = ParseFilePaths(arg);
             }
 
+			for (int i = 0; i < p.Length; i++)
+			{
+				p[i] = p[i].Replace("?zs?", " ");
+			}
+
             if (p.Length > 0)
             {
                 var first = p[0];

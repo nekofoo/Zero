@@ -11,7 +11,14 @@ namespace Zero
 		public static bool AutoOpenFile = true;
 		public static string cancelMessage = "TRANSFER_CANCELLED";
 		public static string printMessage = "TRANSFER_PRINT";
-		public static string sevenZipPath = "7za.exe";
+		public static string sevenZipPath
+		{
+			get
+			{
+				if (OperatingSystem.IsWindows()) return "7za.exe";
+				else return "./7zz";
+			}
+		}
 
-    }
+	}
 }
